@@ -18,40 +18,40 @@ public class MainActivity extends AppCompatActivity {
     public void add(View view) {
         EditText editText = (EditText) findViewById(R.id.editText);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
-        int first = Integer.parseInt(editText.getText().toString());
-        int second = Integer.parseInt(editText2.getText().toString());
-        String result = Integer.toString(first + second);
+        double first = (double) Integer.parseInt(editText.getText().toString());
+        double second = (double) Integer.parseInt(editText2.getText().toString());
+        String result = Double.toString(first + second);
         goToActivity(result);
     }
 
     public void subtract(View view) {
         EditText editText = (EditText) findViewById(R.id.editText);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
-        int first = Integer.parseInt(editText.getText().toString());
-        int second = Integer.parseInt(editText2.getText().toString());
-        String result = Integer.toString(first - second);
+        double first = (double) Integer.parseInt(editText.getText().toString());
+        double second = (double) Integer.parseInt(editText2.getText().toString());
+        String result = Double.toString(first - second);
         goToActivity(result);
     }
     public void multiply(View view) {
         EditText editText = (EditText) findViewById(R.id.editText);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
-        int first = Integer.parseInt(editText.getText().toString());
-        int second = Integer.parseInt(editText2.getText().toString());
-        String result = Integer.toString(first * second);
+        double first = (double) Integer.parseInt(editText.getText().toString());
+        double second = (double) Integer.parseInt(editText2.getText().toString());
+        String result = Double.toString(first * second);
         goToActivity(result);
     }
 
     public void divide(View view) {
         EditText editText = (EditText) findViewById(R.id.editText);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
-        int first = Integer.parseInt(editText.getText().toString());
-        int second = Integer.parseInt(editText2.getText().toString());
+        double first = (double) Integer.parseInt(editText.getText().toString());
+        double second = (double) Integer.parseInt(editText2.getText().toString());
         String result = "";
         if(second == 0) {
             result = "Error, divide by zero";
         }
         else {
-            result = Integer.toString(first / second);
+            result = Double.toString(first / second);
         }
         goToActivity(result);
     }
