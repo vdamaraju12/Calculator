@@ -15,10 +15,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void clickFunction(View view) {
+    public void add(View view) {
         EditText editText = (EditText) findViewById(R.id.editText);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
-        //goToActivity(myTextField.getText().toString());
+        int first = Integer.parseInt(editText.getText().toString());
+        int second = Integer.parseInt(editText2.getText().toString());
+        String result = Integer.toString(first + second);
+        goToActivity(result);
+    }
+
+    public void subtract(View view) {
+        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText2 = (EditText) findViewById(R.id.editText2);
+        int first = Integer.parseInt(editText.getText().toString());
+        int second = Integer.parseInt(editText2.getText().toString());
+        String result = Integer.toString(first - second);
+        goToActivity(result);
+    }
+    public void multiply(View view) {
+        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText2 = (EditText) findViewById(R.id.editText2);
+        int first = Integer.parseInt(editText.getText().toString());
+        int second = Integer.parseInt(editText2.getText().toString());
+        String result = Integer.toString(first * second);
+        goToActivity(result);
+    }
+
+    public void divide(View view) {
+        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText2 = (EditText) findViewById(R.id.editText2);
+        int first = Integer.parseInt(editText.getText().toString());
+        int second = Integer.parseInt(editText2.getText().toString());
+        String result = "";
+        if(second == 0) {
+            result = "Error, divide by zero";
+        }
+        else {
+            result = Integer.toString(first / second);
+        }
+        goToActivity(result);
     }
 
     public void goToActivity(String s) {
